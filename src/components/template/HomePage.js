@@ -28,7 +28,7 @@ function HomePage() {
         <div className={styles.categories}>
             {
                 Object.keys(categories).map(i => (
-                    <CategoryCard key={i} title={categories[i]}  name={i} />
+                    <CategoryCard key={i} title={categories[i]} name={i} />
                 ))
             }
         </div>

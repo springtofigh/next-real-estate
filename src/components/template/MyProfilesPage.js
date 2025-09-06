@@ -10,7 +10,7 @@ function MyProfilesPage({ profiles }) {
         }
         {
           profiles.map(item => (
-            <DashboardCard id={item._id} data={JSON.parse(JSON.stringify(item))} />
+            <DashboardCard key={item._id} d={item._id} data={JSON.parse(JSON.stringify(item))} />
           ))
         }
     </div>
