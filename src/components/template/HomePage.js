@@ -15,8 +15,8 @@ function HomePage() {
                 </h1>
                 {
                     <ul>
-                        {services.map(service => (
-                            <li key={service}>
+                        {services.map((service, index) => (
+                            <li key={index}>
                                 <FiCircle/>
                                 <span>{service}</span>
                             </li>
@@ -28,15 +28,15 @@ function HomePage() {
         <div className={styles.categories}>
             {
                 Object.keys(categories).map(i => (
-                    <CategoryCard title={categories[i]}  name={i} />
+                    <CategoryCard key={i} title={categories[i]}  name={i} />
                 ))
             }
         </div>
         <div className={styles.city}>
             <h3>شهرهای پر بازدید</h3>
             <ul>
-                {cities.map(city => (
-                    <li key={city}>
+                {cities.map((city, index) => (
+                    <li key={index}>
                     <FaCity/>
                     <span>{city}</span>
                     </li>
